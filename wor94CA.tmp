@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcnt26i2pnvqa"]
+
+[ext_resource type="PackedScene" uid="uid://dppesbcqxy68p" path="res://Player.tscn" id="1_6f2xs"]
+[ext_resource type="PackedScene" uid="uid://w37kpjr7s47l" path="res://Zombie.tscn" id="2_d5yol"]
+
+[node name="World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0097599, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Player" parent="Node3D" instance=ExtResource("1_6f2xs")]
+
+[node name="Zombie" parent="Node3D" instance=ExtResource("2_d5yol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71068, 0, -12.4841)
+
+[node name="Zombie2" parent="Node3D" instance=ExtResource("2_d5yol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90955, 0, -12.4757)
+
+[node name="Zombie3" parent="Node3D" instance=ExtResource("2_d5yol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.95154, 0, -11.7929)
+
+[node name="Zombie4" parent="Node3D" instance=ExtResource("2_d5yol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.19031, 0, -10.7837)
