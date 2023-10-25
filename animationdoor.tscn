@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://tnsd21ymg4v0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wmoin"]
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="Animation" id="Animation_y77rj"]
+resource_name = "porteAnim"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p8ae8"]
+_data = {
+"porteAnim": SubResource("Animation_y77rj")
+}
+
+[node name="door" type="Node3D"]
+
+[node name="hinge" type="Node3D" parent="."]
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="hinge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.523384, 0.49938, 0)
+mesh = SubResource("BoxMesh_wmoin")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p8ae8")
+}
