@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dddibdlhnl8c7"]
+[gd_scene load_steps=13 format=3 uid="uid://dddibdlhnl8c7"]
 
 [ext_resource type="MeshLibrary" uid="uid://co8jyvd4cnlh8" path="res://tiles.meshlib" id="1_3b14e"]
 [ext_resource type="PackedScene" uid="uid://bbk3ykfs2k836" path="res://lamp.tscn" id="2_l4sph"]
 [ext_resource type="PackedScene" uid="uid://dhc6ra15i3nx3" path="res://porte.tscn" id="3_f1n4y"]
 [ext_resource type="PackedScene" uid="uid://dppesbcqxy68p" path="res://Player.tscn" id="4_8w30f"]
 [ext_resource type="PackedScene" uid="uid://w37kpjr7s47l" path="res://Zombie.tscn" id="5_fvftr"]
+[ext_resource type="PackedScene" uid="uid://tnsd21ymg4v0" path="res://animationdoor.tscn" id="6_ucp2b"]
 
 [sub_resource type="Gradient" id="Gradient_g5kkq"]
 
@@ -69,3 +70,5 @@ transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -
 
 [node name="Zombie5" parent="." instance=ExtResource("5_fvftr")]
 transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -0.965926, -7.71341e-09, 0.258819, -27.2293, 2.12823, -22.0476)
+
+[node name="door" parent="." instance=ExtResource("6_ucp2b")]
