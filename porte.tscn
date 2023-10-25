@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://bbyb5n4dmn88c"]
+
+[ext_resource type="Script" path="res://porte.gd" id="1_5484t"]
+[ext_resource type="Texture2D" uid="uid://boengk2bi22ve" path="res://4 - EJ37DRz.png" id="1_f1e11"]
+[ext_resource type="Texture2D" uid="uid://d3h404m8fxb4" path="res://mur.PNG" id="2_4nhx8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n7fis"]
+size = Vector3(1, 2, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcplg"]
+albedo_texture = ExtResource("1_f1e11")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_qelep"]
+points = PackedVector3Array(-0.5, -1, -0.05, -0.5, -1, 0.05, -0.5, 1, -0.05, 0.5, -1, -0.05, 0.5, -1, 0.05, -0.5, 1, 0.05, 0.5, 1, -0.05, 0.5, 1, 0.05)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ior34"]
+albedo_texture = ExtResource("2_4nhx8")
+
+[sub_resource type="BoxMesh" id="BoxMesh_30etk"]
+material = SubResource("StandardMaterial3D_ior34")
+size = Vector3(0.1, 2, 0.1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_44hfx"]
+points = PackedVector3Array(-0.05, -1, -0.05, -0.05, -1, 0.05, -0.05, 1, -0.05, 0.05, -1, -0.05, 0.05, -1, 0.05, -0.05, 1, 0.05, 0.05, 1, -0.05, 0.05, 1, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wjf0b"]
+size = Vector3(1, 1, 2)
+
+[node name="Porte" type="Node3D"]
+script = ExtResource("1_5484t")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012184, 0, 0.00826669)
+mesh = SubResource("BoxMesh_n7fis")
+surface_material_override/0 = SubResource("StandardMaterial3D_pcplg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("ConvexPolygonShape3D_qelep")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.533237, 0, 0)
+mesh = SubResource("BoxMesh_30etk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.533237, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_44hfx")
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="."]
+transform = Transform3D(0.861, -0.508514, 0.00965742, 0, 0.018988, 0.99982, -0.508606, -0.860844, 0.0163487, -0.484, 0, 0)
+node_a = NodePath("../RigidBody3D")
+node_b = NodePath("../StaticBody3D")
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = -1.91986
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00255202, -0.132273, -0.0478225)
+shape = SubResource("BoxShape3D_wjf0b")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

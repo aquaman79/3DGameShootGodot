@@ -61,4 +61,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -20.415)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57, 1, -21.448)
 
 [node name="Porte" parent="." instance=ExtResource("3_f1n4y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)

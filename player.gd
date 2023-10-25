@@ -47,7 +47,6 @@ func _physics_process(delta):
 
 	# Ajuster le vecteur de mouvement selon les entrées du joueur
 	if Input.is_action_pressed("move_forwards"): #clique z
-		print("Moving forwards")
 		move_vec.z -= 1
 	if Input.is_action_pressed("move_backwards"):#clique s
 		print("move_backwards")
