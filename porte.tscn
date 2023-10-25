@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbyb5n4dmn88c"]
+[gd_scene load_steps=11 format=3 uid="uid://dhc6ra15i3nx3"]
 
 [ext_resource type="Script" path="res://porte.gd" id="1_5484t"]
 [ext_resource type="Texture2D" uid="uid://boengk2bi22ve" path="res://4 - EJ37DRz.png" id="1_f1e11"]
@@ -23,8 +23,8 @@ size = Vector3(0.1, 2, 0.1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_44hfx"]
 points = PackedVector3Array(-0.05, -1, -0.05, -0.05, -1, 0.05, -0.05, 1, -0.05, 0.05, -1, -0.05, 0.05, -1, 0.05, -0.05, 1, 0.05, 0.05, 1, -0.05, 0.05, 1, 0.05)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_wjf0b"]
-size = Vector3(1, 1, 2)
+[sub_resource type="SphereShape3D" id="SphereShape3D_f38fx"]
+radius = 3.85404
 
 [node name="Porte" type="Node3D"]
 script = ExtResource("1_5484t")
@@ -50,17 +50,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.533237, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_44hfx")
 
 [node name="HingeJoint3D" type="HingeJoint3D" parent="."]
-transform = Transform3D(0.861, -0.508514, 0.00965742, 0, 0.018988, 0.99982, -0.508606, -0.860844, 0.0163487, -0.484, 0, 0)
+transform = Transform3D(3.444, -2.03406, 0.0386248, 0, 0.0759425, 3.99928, -2.03442, -3.44338, 0.0653865, -0.488397, -0.42338, -1.19209e-07)
 node_a = NodePath("../RigidBody3D")
 node_b = NodePath("../StaticBody3D")
 angular_limit/enable = true
-angular_limit/upper = 0.0
-angular_limit/lower = -1.91986
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00255202, -0.132273, -0.0478225)
-shape = SubResource("BoxShape3D_wjf0b")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0589088, -0.102097, -0.047823)
+shape = SubResource("SphereShape3D_f38fx")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
