@@ -1,10 +1,41 @@
-[gd_scene load_steps=8 format=3 uid="uid://tnsd21ymg4v0"]
+[gd_scene load_steps=10 format=3 uid="uid://tnsd21ymg4v0"]
 
 [ext_resource type="Script" path="res://animationdoor.gd" id="1_ua8n0"]
+[ext_resource type="Texture2D" uid="uid://dcp2ms6hh00bj" path="res://8b2b42e4-777d-4be9-88ee-1305a12edcce.webp" id="2_4xs64"]
 [ext_resource type="Script" path="res://porteAnimation.gd" id="2_qno51"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wmoin"]
 size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0esb"]
+albedo_texture = ExtResource("2_4xs64")
+
+[sub_resource type="Animation" id="Animation_t4whf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge/CSGMesh3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("hinge:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_y77rj"]
 resource_name = "porteAnim"
@@ -34,33 +65,6 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_t4whf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("hinge/CSGMesh3D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("hinge:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p8ae8"]
 _data = {
 "RESET": SubResource("Animation_t4whf"),
@@ -68,7 +72,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vioru"]
-size = Vector3(1.5305, 2.30104, 2.69174)
+size = Vector3(2.06451, 2.30104, 2.00509)
 
 [node name="door" type="Node3D"]
 script = ExtResource("1_ua8n0")
@@ -76,8 +80,9 @@ script = ExtResource("1_ua8n0")
 [node name="hinge" type="Node3D" parent="."]
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="hinge"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.523384, 0.49938, 0)
+transform = Transform3D(1.82, 0, 0, 0, 1.82, 0, 0, 0, 1.82, 0.523384, 0.49938, 0)
 mesh = SubResource("BoxMesh_wmoin")
+material = SubResource("StandardMaterial3D_g0esb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -88,7 +93,7 @@ libraries = {
 script = ExtResource("2_qno51")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55823, 0.443875, -1.1554)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.578917, 0.431838, -0.104696)
 shape = SubResource("BoxShape3D_vioru")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

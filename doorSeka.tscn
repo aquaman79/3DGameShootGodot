@@ -1,0 +1,72 @@
+[gd_scene load_steps=9 format=3 uid="uid://cytv2etsmva5t"]
+
+[ext_resource type="Script" path="res://doorSeka.gd" id="1_l10id"]
+[ext_resource type="Texture2D" uid="uid://dcp2ms6hh00bj" path="res://8b2b42e4-777d-4be9-88ee-1305a12edcce.webp" id="2_qmdr5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j5m57"]
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bdvif"]
+albedo_texture = ExtResource("2_qmdr5")
+
+[sub_resource type="Animation" id="Animation_4jprl"]
+resource_name = "doorSeka"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.0551, 0, 0), Vector3(-0.00532866, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mf6pw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.00532866, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sqaw0"]
+_data = {
+"RESET": SubResource("Animation_mf6pw"),
+"doorSeka": SubResource("Animation_4jprl")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b34cn"]
+size = Vector3(4.75241, 1.92621, 4.3768)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_l10id")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00532866, 0, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.525498, 0.513855, 0)
+mesh = SubResource("BoxMesh_j5m57")
+material = SubResource("StandardMaterial3D_bdvif")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sqaw0")
+}
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.508378, 0.535057, 0)
+shape = SubResource("BoxShape3D_b34cn")
