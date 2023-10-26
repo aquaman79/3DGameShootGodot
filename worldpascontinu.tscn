@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dddibdlhnl8c7"]
+[gd_scene load_steps=13 format=3 uid="uid://dddibdlhnl8c7"]
 
 [ext_resource type="MeshLibrary" uid="uid://co8jyvd4cnlh8" path="res://tiles.meshlib" id="1_3b14e"]
 [ext_resource type="PackedScene" uid="uid://bbk3ykfs2k836" path="res://lamp.tscn" id="2_l4sph"]
 [ext_resource type="PackedScene" uid="uid://dppesbcqxy68p" path="res://Player.tscn" id="4_8w30f"]
 [ext_resource type="PackedScene" uid="uid://w37kpjr7s47l" path="res://Zombie.tscn" id="5_fvftr"]
+[ext_resource type="PackedScene" uid="uid://v4yb0j3u11nu" path="res://Fire.tscn" id="5_gx2x8"]
+[ext_resource type="PackedScene" uid="uid://cvam622utyn75" path="res://bois_2.tscn" id="5_qil87"]
 
 [sub_resource type="Gradient" id="Gradient_g5kkq"]
 
@@ -47,6 +49,9 @@ environment = SubResource("Environment_d8hij")
 [node name="Node3D" parent="GridMap" instance=ExtResource("2_l4sph")]
 transform = Transform3D(0.993187, 0.00595867, -0.11638, 0, 0.998692, 0.0511333, 0.116532, -0.0507849, 0.991888, 10.3546, 0.93548, -25.3588)
 
+[node name="Fire" parent="GridMap" instance=ExtResource("5_gx2x8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3914, 1.57391, 0)
+
 [node name="Player" parent="." instance=ExtResource("4_8w30f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.51161)
 
@@ -64,3 +69,6 @@ transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -
 
 [node name="Zombie5" parent="." instance=ExtResource("5_fvftr")]
 transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -0.965926, -7.71341e-09, 0.258819, -27.2293, 2.12823, -22.0476)
+
+[node name="bois2" parent="." instance=ExtResource("5_qil87")]
+transform = Transform3D(-0.0532018, 0.508717, 0.129569, -0.220928, -0.42668, 0, 0.0838326, -0.80161, 0.0822273, -0.201357, -1.01621, 6.89027)
