@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://tnsd21ymg4v0"]
+[gd_scene load_steps=10 format=3 uid="uid://bvudvtodof10u"]
 
 [ext_resource type="Script" path="res://animationdoor.gd" id="1_ua8n0"]
-[ext_resource type="Texture2D" uid="uid://dcp2ms6hh00bj" path="res://8b2b42e4-777d-4be9-88ee-1305a12edcce.webp" id="2_4xs64"]
+[ext_resource type="Texture2D" uid="uid://bce3yvlt6fdpg" path="res://8b2b42e4-777d-4be9-88ee-1305a12edcce.webp" id="2_4xs64"]
 [ext_resource type="Script" path="res://porteAnimation.gd" id="2_qno51"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wmoin"]
