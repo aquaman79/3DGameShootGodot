@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://v4yb0j3u11nu"]
+
+[ext_resource type="PackedScene" path="res://gpu_particles_3d.tscn" id="1_1lccn"]
+
+[node name="Fire" type="Node3D"]
+transform = Transform3D(0.89589, 0.444276, 0, -0.444276, 0.89589, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="GPUParticles3D" parent="." instance=ExtResource("1_1lccn")]
+transform = Transform3D(0.888034, -0.458997, 0.0267649, 0.45506, 0.885751, 0.0914669, -0.0656902, -0.0690463, 0.995449, 0.0286144, 0.340949, 0.160007)
+visibility_aabb = AABB(-2.85691, -3.04943, -4, 5.71382, 6.09887, 8)
+
+[node name="Wood" type="Node3D" parent="."]
