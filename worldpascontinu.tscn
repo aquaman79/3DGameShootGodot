@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dddibdlhnl8c7"]
+[gd_scene load_steps=12 format=3 uid="uid://dddibdlhnl8c7"]
 
 [ext_resource type="MeshLibrary" uid="uid://co8jyvd4cnlh8" path="res://tiles.meshlib" id="1_3b14e"]
 [ext_resource type="PackedScene" uid="uid://bbk3ykfs2k836" path="res://lamp.tscn" id="2_l4sph"]
 [ext_resource type="PackedScene" uid="uid://dppesbcqxy68p" path="res://Player.tscn" id="4_8w30f"]
-[ext_resource type="PackedScene" uid="uid://v4yb0j3u11nu" path="res://Fire.tscn" id="4_ushm4"]
 [ext_resource type="PackedScene" uid="uid://w37kpjr7s47l" path="res://Zombie.tscn" id="5_fvftr"]
 [ext_resource type="PackedScene" uid="uid://bvudvtodof10u" path="res://animationdoor.tscn" id="6_ucp2b"]
 
@@ -52,9 +51,6 @@ transform = Transform3D(0.993187, 0.00595867, -0.11638, 0, 0.998692, 0.0511333, 
 
 [node name="door" parent="GridMap" instance=ExtResource("6_ucp2b")]
 transform = Transform3D(0.0705399, 0, 0.997509, 0, 1, 0, -0.997509, 0, 0.0705399, -8.04391, 0.364915, -1.34329)
-
-[node name="Fire" parent="GridMap" instance=ExtResource("4_ushm4")]
-transform = Transform3D(0.89589, 0.444276, 0, -0.444276, 0.89589, 0, 0, 0, 1, -5.22491, 0, 20.8225)
 
 [node name="Player" parent="." instance=ExtResource("4_8w30f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.51161)
