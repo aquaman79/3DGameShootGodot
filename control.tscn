@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://n3ynkvwguonv"]
+
+[ext_resource type="Script" path="res://Control.gd" id="1_m4wdb"]
+[ext_resource type="Texture2D" uid="uid://bgg0ek3onuojr" path="res://wolf3d-menu-v2.1.mp4.jpg" id="2_ht3uq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m4wdb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Wolf3d-menu-v2_1_mp4" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
+position = Vector2(309, 173)
+texture = ExtResource("2_ht3uq")
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
+offset_left = -147.0
+offset_top = -6.0
+offset_right = 179.0
+offset_bottom = 48.0
+text = "GAME OVER : Vous étes tué par le zombie
+
+"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
+offset_left = -27.0
+offset_top = 101.0
+offset_right = 41.0
+offset_bottom = 132.0
+text = "Rejouer
+"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4/Button2" to="." method="_on_button_2_pressed"]
