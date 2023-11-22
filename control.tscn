@@ -21,7 +21,8 @@ offset_bottom = 40.0
 layout_mode = 2
 
 [node name="Wolf3d-menu-v2_1_mp4" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
-position = Vector2(309, 173)
+position = Vector2(574, 319.25)
+scale = Vector2(1.85484, 1.83811)
 texture = ExtResource("2_ht3uq")
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]

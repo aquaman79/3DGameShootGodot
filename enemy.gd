@@ -34,6 +34,7 @@ func _physics_process(delta):
 	# Vérifiez si la distance est suffisamment proche pour attraper le joueur
 	if distance_to_player <= MIN_DISTANCE_TO_PLAYER:
 		print("Game Over")
+		show_game_over_interface()
 		# Vous pouvez ajouter ici d'autres logiques, comme finir le jeu ou recharger la scène
 		return
 
@@ -48,6 +49,12 @@ func _physics_process(delta):
 		var coll = raycast.get_collider()
 		if coll != null and coll.name == "Player" and !coll.is_shooting:
 			kill()
+
+
+
+func show_game_over_interface():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE) 
+	get_tree().change_scene_to_file("res://control.tscn")
 
 # Fonction pour vérifier si le joueur est dans le champ de vision du zombie
 func is_player_in_view(vec_to_player):
