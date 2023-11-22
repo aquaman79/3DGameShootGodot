@@ -14,3 +14,7 @@ func _process(delta):
 func _on_button_2_pressed():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  # Rendre la souris visible
 	get_tree().change_scene_to_file("res://worldpascontinu1.tscn")
+
+
+func _on_button_3_pressed():
+	get_tree().quit()
