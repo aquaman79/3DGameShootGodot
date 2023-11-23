@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dddibdlhnl8c7"]
+[gd_scene load_steps=21 format=3 uid="uid://dddibdlhnl8c7"]
 
 [ext_resource type="MeshLibrary" uid="uid://co8jyvd4cnlh8" path="res://tiles.meshlib" id="1_3b14e"]
+[ext_resource type="Script" path="res://worldpascontinu.gd" id="1_3dsqa"]
 [ext_resource type="Texture2D" uid="uid://8wbd2opulqi5" path="res://sky9.png" id="2_1bcq3"]
 [ext_resource type="PackedScene" uid="uid://bbk3ykfs2k836" path="res://lamp.tscn" id="2_l4sph"]
 [ext_resource type="PackedScene" uid="uid://dppesbcqxy68p" path="res://Player.tscn" id="4_8w30f"]
@@ -13,7 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://dhhfkksh6vqbt" path="res://model_60a_-_cyprus_racer_snake (1).glb" id="9_iawsf"]
 [ext_resource type="PackedScene" uid="uid://drihqkh5eg4v6" path="res://chiot_puppy_skull.glb" id="9_uyn3j"]
 [ext_resource type="PackedScene" uid="uid://6cb1ih1y46n" path="res://gray_big_rock.glb" id="11_1urn5"]
-[ext_resource type="PackedScene" uid="uid://crupgdpyxovrh" path="res://timer.tscn" id="14_ly075"]
+[ext_resource type="PackedScene" uid="uid://bt74aohnuvefa" path="res://timer.tscn" id="14_ly075"]
+[ext_resource type="PackedScene" uid="uid://ck8tgfe4l2ipj" path="res://distance.tscn" id="16_4pflh"]
+[ext_resource type="AudioStream" uid="uid://bewu8thqgoere" path="res://Wolfenstein 3D Title Theme.wav" id="17_dage3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bepvd"]
 resource_local_to_scene = true
@@ -38,6 +41,7 @@ reflected_light_source = 1
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.372846, 0)
+script = ExtResource("1_3dsqa")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3.44989, 0)
@@ -54,7 +58,7 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 environment = SubResource("Environment_d8hij")
 
 [node name="Node3D" parent="GridMap" instance=ExtResource("2_l4sph")]
-transform = Transform3D(0.11638, 0.00595867, 0.993187, -0.0511333, 0.998692, 3.20142e-08, -0.991888, -0.0507849, 0.116532, -63.608, 2, -24.66)
+transform = Transform3D(0.11638, 0.00595867, 0.993187, -0.0511333, 0.998692, 3.20142e-08, -0.991888, -0.0507849, 0.116532, -54.6264, 1.53649, -24.66)
 
 [node name="door" parent="GridMap" instance=ExtResource("6_ucp2b")]
 transform = Transform3D(0.0832371, 0, 1.17706, 0, 1.18, 0, -1.17706, 0, 0.0832371, -7.672, 0.3, -1.197)
@@ -192,3 +196,8 @@ transform = Transform3D(0.0832371, 0, 1.17706, 0, 1.18, 0, -1.17706, 0, 0.083237
 transform = Transform3D(0.840579, -0.549305, 0.619752, 0.247427, 1.00931, 0.558994, -0.790321, -0.26825, 0.834167, 30, 3.349, 2.013)
 
 [node name="Node" parent="." instance=ExtResource("14_ly075")]
+
+[node name="Control" parent="." instance=ExtResource("16_4pflh")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_dage3")
