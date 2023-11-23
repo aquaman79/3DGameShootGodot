@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dke1xbx42lkgd"]
+
+[ext_resource type="Script" path="res://victory.gd" id="1_cql7n"]
+[ext_resource type="Texture2D" uid="uid://vt1ebx5ef7nw" path="res://Congartulations.webp" id="2_6nqrk"]
+[ext_resource type="AudioStream" uid="uid://bqugl10nmrwwh" path="res://Victory - Sound Effect.wav" id="3_0qskw"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cql7n")
+
+[node name="Congartulations" type="Sprite2D" parent="."]
+position = Vector2(581.5, 329.5)
+scale = Vector2(1.1416, 0.635742)
+texture = ExtResource("2_6nqrk")
+
+[node name="Button" type="Button" parent="Congartulations"]
+offset_left = -10.9495
+offset_top = 2.35944
+offset_right = 66.0505
+offset_bottom = 56.3594
+text = "Rejouer"
+
+[node name="Button2" type="Button" parent="Congartulations"]
+offset_left = -11.0
+offset_top = 76.0
+offset_right = 66.0
+offset_bottom = 133.0
+text = "Quitter"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0qskw")
+autoplay = true
+
+[connection signal="pressed" from="Congartulations/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Congartulations/Button2" to="." method="_on_button_2_pressed"]

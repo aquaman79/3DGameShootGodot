@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://n3ynkvwguonv"]
+[gd_scene load_steps=4 format=3 uid="uid://n3ynkvwguonv"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_m4wdb"]
 [ext_resource type="Texture2D" uid="uid://d24yb3copggom" path="res://gameOver.webp" id="2_wqrc5"]
+[ext_resource type="AudioStream" uid="uid://cbcaywqw6mkvk" path="res://Game over sound effect no copyright.wav" id="3_iodgo"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -48,6 +49,10 @@ offset_top = 303.949
 offset_right = 37.6175
 offset_bottom = 334.949
 text = "Quitter"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iodgo")
+autoplay = true
 
 [connection signal="pressed" from="GameOver/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="GameOver/Button3" to="." method="_on_button_3_pressed"]

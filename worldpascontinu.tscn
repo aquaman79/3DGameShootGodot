@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://drihqkh5eg4v6" path="res://chiot_puppy_skull.glb" id="9_uyn3j"]
 [ext_resource type="PackedScene" uid="uid://6cb1ih1y46n" path="res://gray_big_rock.glb" id="11_1urn5"]
 [ext_resource type="PackedScene" uid="uid://crupgdpyxovrh" path="res://timer.tscn" id="14_ly075"]
-[ext_resource type="PackedScene" path="res://distance.tscn" id="16_4pflh"]
+[ext_resource type="PackedScene" uid="uid://ck8tgfe4l2ipj" path="res://distance.tscn" id="16_4pflh"]
 [ext_resource type="AudioStream" uid="uid://bewu8thqgoere" path="res://Wolfenstein 3D Title Theme.wav" id="17_dage3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bepvd"]
@@ -214,16 +214,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.718, 4.7, 34.208)
 transform = Transform3D(0.267642, 0, -0.963518, 0, 1, 0, 0.963518, 0, 0.267642, 37.577, 4.7, 17.897)
 
 [node name="Zombie2" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.107, 4.7, 21.062)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.107, 4.7, 7.85306)
 
 [node name="Zombie31" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.584, 4.7, 16.416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.584, 4.7, 11.2135)
 
 [node name="Zombie32" parent="." instance=ExtResource("5_fvftr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.584, 4.7, -37.895)
 
 [node name="Zombie33" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.326, 4.7, -39.501)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09474, 4.7, -29.6117)
 
 [node name="Zombie34" parent="." instance=ExtResource("5_fvftr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.291, 4.7, -31.209)
@@ -366,3 +366,4 @@ transform = Transform3D(0.840579, -0.549305, 0.619752, 0.247427, 1.00931, 0.5589
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_dage3")
+autoplay = true

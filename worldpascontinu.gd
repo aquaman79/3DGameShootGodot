@@ -25,3 +25,8 @@ func _physics_process(delta):
 	
 	# Mettre à jour le Label avec la distance formatée
 	distance_label.text = "Distance: %.1f" % distance
+	# Vérifier si la distance est entre 0 et 5
+	if distance >= 0.0 and distance <= 5.0:
+		# Transition vers la page "victory.tscn" lorsque la distance est entre 0 et 5
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  # Rendre la souris visible
+		get_tree().change_scene_to_file("res://victory.tscn")

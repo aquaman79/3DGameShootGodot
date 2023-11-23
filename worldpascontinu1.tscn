@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://v4yb0j3u11nu" path="res://Fire.tscn" id="4_yqmao"]
 [ext_resource type="PackedScene" uid="uid://dppesbcqxy68p" path="res://Player.tscn" id="5_xyewe"]
 [ext_resource type="PackedScene" uid="uid://w37kpjr7s47l" path="res://Zombie.tscn" id="6_itmxn"]
-[ext_resource type="PackedScene" uid="uid://bt74aohnuvefa" path="res://timer.tscn" id="7_fwpch"]
+[ext_resource type="PackedScene" uid="uid://crupgdpyxovrh" path="res://timer.tscn" id="7_fwpch"]
 
 [sub_resource type="Gradient" id="Gradient_g5kkq"]
 
