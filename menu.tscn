@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cq0wpqbxockqb"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_ic3jh"]
-[ext_resource type="Texture2D" uid="uid://cwf8e76epiiyr" path="res://wolf3d-menu-v2.1.mp4.jpg" id="2_3uwpo"]
+[ext_resource type="Texture2D" uid="uid://bn0s7maq4f205" path="res://accueilGame.webp" id="2_3ca1v"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -20,24 +20,23 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Wolf3d-menu-v2_1_mp4" type="Sprite2D" parent="."]
-position = Vector2(578.5, 326)
-scale = Vector2(1.84355, 1.851)
-texture = ExtResource("2_3uwpo")
+[node name="AccueilGame" type="Sprite2D" parent="."]
+position = Vector2(594.5, 329.5)
+scale = Vector2(1.16895, 0.645508)
+texture = ExtResource("2_3ca1v")
 
-[node name="Play" type="Button" parent="Wolf3d-menu-v2_1_mp4"]
-offset_left = -11.6623
-offset_top = 8.10373
-offset_right = 30.3377
-offset_bottom = 39.1037
+[node name="Play" type="Button" parent="AccueilGame"]
+offset_left = -42.2357
+offset_top = -155.2
+offset_right = -0.235687
+offset_bottom = -115.2
 text = "Play"
 
-[node name="Quit" type="Button" parent="Wolf3d-menu-v2_1_mp4"]
-offset_left = -12.7472
-offset_top = 50.243
-offset_right = 29.2528
-offset_bottom = 81.243
+[node name="Quit" type="Button" parent="AccueilGame"]
+offset_left = -39.6498
+offset_top = -40.0
+offset_right = 2.35016
 text = "Quit"
 
-[connection signal="pressed" from="Wolf3d-menu-v2_1_mp4/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Wolf3d-menu-v2_1_mp4/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="AccueilGame/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="AccueilGame/Quit" to="." method="_on_quit_pressed"]

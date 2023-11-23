@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dddibdlhnl8c7"]
+[gd_scene load_steps=18 format=3 uid="uid://dddibdlhnl8c7"]
 
 [ext_resource type="MeshLibrary" uid="uid://co8jyvd4cnlh8" path="res://tiles.meshlib" id="1_3b14e"]
 [ext_resource type="Texture2D" uid="uid://8wbd2opulqi5" path="res://sky9.png" id="2_1bcq3"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dhhfkksh6vqbt" path="res://model_60a_-_cyprus_racer_snake (1).glb" id="9_iawsf"]
 [ext_resource type="PackedScene" uid="uid://drihqkh5eg4v6" path="res://chiot_puppy_skull.glb" id="9_uyn3j"]
 [ext_resource type="PackedScene" uid="uid://6cb1ih1y46n" path="res://gray_big_rock.glb" id="11_1urn5"]
+[ext_resource type="PackedScene" uid="uid://crupgdpyxovrh" path="res://timer.tscn" id="14_ly075"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bepvd"]
 resource_local_to_scene = true
@@ -53,7 +54,7 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 environment = SubResource("Environment_d8hij")
 
 [node name="Node3D" parent="GridMap" instance=ExtResource("2_l4sph")]
-transform = Transform3D(0.11638, 0.00595867, 0.993187, -0.0511333, 0.998692, 3.20142e-08, -0.991888, -0.0507849, 0.116532, -63.6078, 2.02267, -24.6603)
+transform = Transform3D(0.11638, 0.00595867, 0.993187, -0.0511333, 0.998692, 3.20142e-08, -0.991888, -0.0507849, 0.116532, -63.608, 2, -24.66)
 
 [node name="door" parent="GridMap" instance=ExtResource("6_ucp2b")]
 transform = Transform3D(0.0832371, 0, 1.17706, 0, 1.18, 0, -1.17706, 0, 0.0832371, -7.672, 0.3, -1.197)
@@ -101,16 +102,16 @@ transform = Transform3D(0.0177336, -0.0276605, -0.846822, -0.475463, 0.700747, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -5.512)
 
 [node name="Zombie" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.853, 5, 9.736)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.853, 4, 9.736)
 
 [node name="Zombie2" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.107, 5, -12.816)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.107, 4, -12.816)
 
 [node name="Zombie3" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 5, -18.448)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 4, -18.448)
 
 [node name="Zombie4" parent="." instance=ExtResource("5_fvftr")]
-transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -0.965926, -7.71341e-09, 0.258819, -20.947, 5, -23.126)
+transform = Transform3D(0.25, 0.258819, 0.933013, -0.0669873, 0.965926, -0.25, -0.965926, -7.71341e-09, 0.258819, -20.947, 4, -23.126)
 
 [node name="model_60a_-_cyprus_racer_snake (1)" parent="." instance=ExtResource("9_iawsf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.8798, 3.5, 20.9572)
@@ -189,3 +190,5 @@ transform = Transform3D(0.0832371, 0, 1.17706, 0, 1.18, 0, -1.17706, 0, 0.083237
 
 [node name="dinosaur_1" parent="." instance=ExtResource("7_kjxau")]
 transform = Transform3D(0.840579, -0.549305, 0.619752, 0.247427, 1.00931, 0.558994, -0.790321, -0.26825, 0.834167, 30, 3.349, 2.013)
+
+[node name="Node" parent="." instance=ExtResource("14_ly075")]

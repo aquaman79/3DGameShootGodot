@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://n3ynkvwguonv"]
 
 [ext_resource type="Script" path="res://Control.gd" id="1_m4wdb"]
-[ext_resource type="Texture2D" uid="uid://bgg0ek3onuojr" path="res://wolf3d-menu-v2.1.mp4.jpg" id="2_ht3uq"]
+[ext_resource type="Texture2D" uid="uid://d24yb3copggom" path="res://gameOver.webp" id="2_wqrc5"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,34 +20,34 @@ offset_bottom = 40.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Wolf3d-menu-v2_1_mp4" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
-position = Vector2(574, 319.25)
-scale = Vector2(1.85484, 1.83811)
-texture = ExtResource("2_ht3uq")
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(579, 323)
+scale = Vector2(1.14453, 0.652344)
+texture = ExtResource("2_wqrc5")
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
-offset_left = -147.0
-offset_top = -6.0
-offset_right = 179.0
-offset_bottom = 48.0
+[node name="Button" type="Button" parent="GameOver"]
+offset_left = -142.645
+offset_top = 141.41
+offset_right = 183.355
+offset_bottom = 195.41
 text = "GAME OVER : Vous étes tué par le zombie
 
 "
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
-offset_left = -18.3304
-offset_top = 76.0292
-offset_right = 49.6696
-offset_bottom = 107.029
+[node name="Button2" type="Button" parent="GameOver"]
+offset_left = -29.0654
+offset_top = 235.683
+offset_right = 38.9346
+offset_bottom = 266.683
 text = "Rejouer
 "
 
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
-offset_left = -15.0957
-offset_top = 115.2
-offset_right = 48.9043
-offset_bottom = 146.2
+[node name="Button3" type="Button" parent="GameOver"]
+offset_left = -26.3825
+offset_top = 303.949
+offset_right = 37.6175
+offset_bottom = 334.949
 text = "Quitter"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GameOver/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GameOver/Button3" to="." method="_on_button_3_pressed"]
