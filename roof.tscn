@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://casmx3pvabab3"]
+
+[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_yc67s"]
+aabb = AABB(0, 1, 0, 0, 0, 0)
+
+[sub_resource type="Skin" id="Skin_ukmtm"]
+
+[node name="Roof" type="MeshInstance3D"]
+mesh = SubResource("PlaceholderMesh_yc67s")
+skin = SubResource("Skin_ukmtm")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dawvjgxwuri6p"]
+[gd_scene load_steps=3 format=3 uid="uid://cq0wpqbxockqb"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_ic3jh"]
-[ext_resource type="Texture2D" uid="uid://bgg0ek3onuojr" path="res://wolf3d-menu-v2.1.mp4.jpg" id="2_3uwpo"]
+[ext_resource type="Texture2D" uid="uid://cwf8e76epiiyr" path="res://wolf3d-menu-v2.1.mp4.jpg" id="2_3uwpo"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
