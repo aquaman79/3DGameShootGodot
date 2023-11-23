@@ -21,7 +21,8 @@ offset_bottom = 40.0
 layout_mode = 2
 
 [node name="Wolf3d-menu-v2_1_mp4" type="Sprite2D" parent="MarginContainer/VBoxContainer"]
-position = Vector2(309, 173)
+position = Vector2(574, 319.25)
+scale = Vector2(1.85484, 1.83811)
 texture = ExtResource("2_ht3uq")
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
@@ -34,11 +35,19 @@ text = "GAME OVER : Vous étes tué par le zombie
 "
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
-offset_left = -27.0
-offset_top = 101.0
-offset_right = 41.0
-offset_bottom = 132.0
+offset_left = -18.3304
+offset_top = 76.0292
+offset_right = 49.6696
+offset_bottom = 107.029
 text = "Rejouer
 "
 
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4"]
+offset_left = -15.0957
+offset_top = 115.2
+offset_right = 48.9043
+offset_bottom = 146.2
+text = "Quitter"
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Wolf3d-menu-v2_1_mp4/Button3" to="." method="_on_button_3_pressed"]
