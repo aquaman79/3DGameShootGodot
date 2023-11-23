@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://porteAnimation.gd" id="2_qno51"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wmoin"]
-size = Vector3(1, 1, 0.1)
+size = Vector3(0.8, 1, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0esb"]
 albedo_texture = ExtResource("2_4xs64")
